@@ -5,7 +5,7 @@ function showTreasure () {
     treasurex = randint(1, 4)
     treasurey = randint(1, 4)
     led.plotBrightness(hunterx, huntery, 20)
-    led.plotBrightness(treasurex, treasurey, 255)
+    led.plotBrightness(0, treasurey, 255)
 }
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
@@ -13,7 +13,7 @@ input.onButtonPressed(Button.A, function () {
     led.plotBrightness(hunterx % 5, huntery % 5, 20)
 })
 input.onButtonPressed(Button.AB, function () {
-    if (hunterx == treasurex && huntery == treasurey) {
+    if (hunterx % 5 == treasurex && huntery % 5 == treasurey) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
