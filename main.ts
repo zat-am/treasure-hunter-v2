@@ -10,7 +10,7 @@ function showTreasure () {
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     huntery += 1
-    led.plotBrightness(hunterx, huntery, 20)
+    led.plotBrightness(hunterx % 5, huntery % 5, 20)
 })
 input.onButtonPressed(Button.AB, function () {
     if (hunterx == treasurex && huntery == treasurey) {
@@ -24,7 +24,7 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     hunterx += 1
-    led.plotBrightness(hunterx, huntery, 20)
+    led.plotBrightness(hunterx % 5, huntery % 5, 20)
 })
 // Treasure Hunter v1.0 by Phil Greene
 // 
