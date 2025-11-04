@@ -5,7 +5,7 @@ function showTreasure () {
     treasurex = randint(1, 4)
     treasurey = randint(1, 4)
     led.plotBrightness(hunterx, huntery, 20)
-    led.plotBrightness(0, treasurey, 255)
+    led.plotBrightness(treasurex, treasurey, 255)
 }
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
